@@ -1,0 +1,61 @@
+------ Build started: Project: Midterm2, Configuration: Debug AVR ------
+Build started.
+Project "Midterm2.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "E:\7.0\Vs\Compiler.targets" from project "C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\Midterm2.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path E:\7.0\shellUtils
+		E:\7.0\shellUtils\make.exe all --jobs 8 --output-sync 
+		Building file: .././main.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"E:\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"E:\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328pb -B "E:\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega328pb" -c -std=gnu99 -MD -MP -MF "main.d" -MT"main.d" -MT"main.o"   -o "main.o" ".././main.c" 
+		Finished building: .././main.c
+C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\main.c(25,6): warning: return type of 'main' is not 'int' [-Wmain]
+		 void main()
+		      ^
+		.././main.c: In function 'main':
+C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\main.c(32,3): warning: implicit declaration of function 'USART_init' [-Wimplicit-function-declaration]
+		   USART_init(); // initialize the USART
+		   ^
+C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\main.c(76,7): warning: implicit declaration of function 'USART_putstring' [-Wimplicit-function-declaration]
+		       USART_putstring(distance_string);    //prints to terminal
+		       ^
+		.././main.c: At top level:
+C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\main.c(129,6): warning: conflicting types for 'USART_init'
+		 void USART_init(void)
+		      ^
+C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\main.c(32,3): info: previous implicit declaration of 'USART_init' was here
+		   USART_init(); // initialize the USART
+		   ^
+C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\main.c(146,6): warning: conflicting types for 'USART_putstring'
+		 void USART_putstring(char* StringPtr)
+		      ^
+C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\main.c(76,7): info: previous implicit declaration of 'USART_putstring' was here
+		       USART_putstring(distance_string);    //prints to terminal
+		       ^
+		Building target: Midterm2.elf
+		Invoking: AVR/GNU Linker : 5.4.0
+		"E:\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe" -o Midterm2.elf  main.o   -Wl,-Map="Midterm2.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega328pb -B "E:\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega328pb"  
+		Finished building target: Midterm2.elf
+		"E:\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "Midterm2.elf" "Midterm2.hex"
+		"E:\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "Midterm2.elf" "Midterm2.eep" || exit 0
+		"E:\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "Midterm2.elf" > "Midterm2.lss"
+		"E:\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "Midterm2.elf" "Midterm2.srec"
+		"E:\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "Midterm2.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		   3508	      0	      2	   3510	    db6	Midterm2.elf
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	3508 bytes   10.7 % Full
+				Data Memory Usage 		:	2 bytes   0.1 % Full
+				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "Midterm2.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "E:\7.0\Vs\Avr.common.targets" from project "C:\Users\Doradoboy\Documents\Atmel Studio\7.0\Midterm2\Midterm2\Midterm2.cproj" (entry point):
+Done building target "Build" in project "Midterm2.cproj".
+Done building project "Midterm2.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+
