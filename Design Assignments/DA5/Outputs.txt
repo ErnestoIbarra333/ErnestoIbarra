@@ -1,0 +1,23 @@
+------ Build started: Project: DA5, Configuration: Debug AVR ------
+Build started.
+Project "DA5.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "E:\7.0\Vs\Compiler.targets" from project "C:\Users\Doradoboy\Documents\Atmel Studio\7.0\DA5\DA5\DA5.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path E:\7.0\shellUtils
+		E:\7.0\shellUtils\make.exe all --jobs 8 --output-sync 
+		make: Nothing to be done for 'all'.
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	1608 bytes   4.9 % Full
+				Data Memory Usage 		:	4 bytes   0.2 % Full
+				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "DA5.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "E:\7.0\Vs\Avr.common.targets" from project "C:\Users\Doradoboy\Documents\Atmel Studio\7.0\DA5\DA5\DA5.cproj" (entry point):
+Done building target "Build" in project "DA5.cproj".
+Done building project "DA5.cproj".
+
+Build succeeded.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========

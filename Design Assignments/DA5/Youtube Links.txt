@@ -1,0 +1,3 @@
+DC Motor: https://youtu.be/IDIETvT6kXg
+Stepper Motor: https://youtu.be/y12pRYd9_fM
+Servo Motor: https://youtu.be/Y44HIpyd7nw
